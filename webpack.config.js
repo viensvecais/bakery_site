@@ -67,6 +67,10 @@ module.exports = {
           name: "fonts/[name].[ext]",
         },
       },
+      {
+        test: /\.txt$/,
+        use: 'raw-loader'
+      },
     ]
   },
   plugins: [
