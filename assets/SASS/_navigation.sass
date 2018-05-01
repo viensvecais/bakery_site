@@ -1,0 +1,161 @@
+// Custom styling
+//Custom styling
+
+.navbar
+  width: 100%
+  padding: 0!important
+  .container
+    // border: 1px solid black
+    text-align: center
+    width: 77.7vw
+    padding: 0
+  .navbar-brand
+    font-family: Scriptina
+    font-size: 23px
+    letter-spacing: 7.5px
+    padding: 7px 0 14px 0px
+    margin: 0
+  #navbarNav
+    max-width: 100%
+    .navbar-nav
+      width: 100%
+      display: flex
+      justify-content: flex-end
+      margin-left: 65px
+  .tilde
+    font-family: Alegreya
+    color: $colDefault
+    width: 3.3vw
+    margin: 0 auto
+    padding: 8px
+    font-size: 12px
+  a
+    font-family: Alegreya
+    font-size: 11.5px
+    letter-spacing: 3px
+  #social
+    display: flex
+    justify-content: flex-end
+    flex-grow: 1
+    margin: auto 0
+    padding: 10px 0
+    $iconDim: 13px
+    .soc-icon
+      height: $iconDim
+      width: $iconDim
+      margin: 0 18px 0 0
+    #twitter
+      background: url(../../img/icons.png)0 0 no-repeat
+      background-size: auto 100%
+    #facebook
+      background: url(../../img/icons.png)-32px 0 no-repeat
+      background-size: auto 100%
+    #instagram
+      background: url(../../img/icons.png)-64px 0 no-repeat
+      background-size: auto 100%
+      margin-right: 0
+@media (max-width: 991px)
+  .navbar
+    #navbarNav
+      .navbar-nav
+        margin: 0
+    #social
+      justify-content: center
+
+
+//Navigation menu generator output
+.navbar
+  background-color: $bgDefault
+  .navbar-brand
+    color: $colDefault
+    &:hover, &:focus
+      color: $colHighlight
+  .navbar-text
+    color: $colDefault
+    a 
+      color: $colHighlight
+      &:hover, &:focus
+        color: $colHighlight
+  .navbar-nav
+    .nav-link
+      color: $colDefault
+      border-radius: .25rem
+      margin: 0 0.25em
+      &:not(.disabled)
+        &:hover, &:focus
+          color: $colHighlight
+    @if $dropDown
+      .dropdown-menu
+        background-color: $bgDefault
+        border-color: $bgHighlight
+        .dropdown-item
+          color: $colDefault
+          &:hover, &:focus, &.active
+            color: $colHighlight
+            background-color: $bgHighlight
+        .dropdown-divider
+          border-top-color: $bgHighlight
+    .nav-item.active, .nav-item.show
+      .nav-link, .nav-link:hover, .nav-link:focus
+        color: $colHighlight
+        background-color: $bgHighlight
+  .navbar-toggle
+    border-color: $bgHighlight
+    &:hover, &:focus
+      background-color: $bgHighlight
+    .navbar-toggler-icon
+      color: $colDefault
+  .navbar-collapse,
+  .navbar-form
+    border-color: $colDefault
+  .navbar-link
+    color: $colDefault
+    &:hover
+      color: $colHighlight
+@media (max-width: 575px)
+  .navbar-expend-sm .navbar-nav .show .dropdown-menu
+    .dropdown-item
+      color: $colDefault
+      &:hover, &:focus
+        color: $colHighlight
+    .dropdown-item.active
+      color: $colHighlight
+      background-color: $bgHighlight
+@media (max-width: 767px)
+  .navbar-expend-md .navbar-nav .show .dropdown-menu
+    .dropdown-item
+      color: $colDefault
+      &:hover, &:focus
+        color: $colHighlight
+    .dropdown-item.active
+      color: $colHighlight
+      background-color: $bgHighlight
+@media (max-width: 991px)
+  .navbar-expend-lg .navbar-nav .show .dropdown-menu
+    .dropdown-item
+      color: $colDefault
+      &:hover, &:focus
+        color: $colHighlight
+    .dropdown-item.active
+      color: $colHighlight
+      background-color: $bgHighlight
+@media (max-width: 1199px)
+  .navbar-expend-xl .navbar-nav .show .dropdown-menu
+    .dropdown-item
+      color: $colDefault
+      &:hover, &:focus
+        color: $colHighlight
+    .dropdown-item.active
+      color: $colHighlight
+      background-color: $bgHighlight
+.navbar-expend .navbar-nav .show .dropdown-menu
+  .dropdown-item
+    color: $colDefault
+    &:hover, &:focus
+      color: $colHighlight
+  .dropdown-item.active
+    color: $colHighlight
+    background-color: $bgHighlight
+
+
+    

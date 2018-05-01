@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Alegreya';
+    src: url('Alegreya-Regular.eot');
+    src: url('Alegreya-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Alegreya-Regular.woff') format('woff'),
+        url('Alegreya-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('PlayfairDisplay-Bold.eot');
+    src: url('PlayfairDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('PlayfairDisplay-Bold.woff') format('woff'),
+        url('PlayfairDisplay-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alegreya';
+    src: url('Alegreya-Bold.eot');
+    src: url('Alegreya-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Alegreya-Bold.woff') format('woff'),
+        url('Alegreya-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('ProximaNova-Regular.eot');
+    src: url('ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+        url('ProximaNova-Regular.woff') format('woff'),
+        url('ProximaNova-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Scriptina';
+    src: url('Scriptina.eot');
+    src: url('Scriptina.eot?#iefix') format('embedded-opentype'),
+        url('Scriptina.woff') format('woff'),
+        url('Scriptina.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
