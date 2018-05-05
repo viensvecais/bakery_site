@@ -1,10 +1,30 @@
 #hero
-    background: url('../../img/bg1.png')
-    background-position: center center no-repeat
-    background-size: cover
-    height: 900px
+    background: radial-gradient(circle,$gradient, transparent 50%), url('../../img/bg1.png')
+    background-position: center no-repeat
+    background-size: 100% auto
     text-align: center
-.jumbotron
-    background: none
-    margin-top: 68px
+    .jumbotron
+        margin: 68px 0 10px 0
+        background: none
+    #cta
+        height: 50px
+        color: white
+        font-size: 14px
+        font-family: Alegreya
+        letter-spacing: 4px
+        background-color: $bgDefault
+        border: 1px dashed $borderDash
+        border-radius: 0
+        padding: 0 49px
+        margin-bottom: 90px
+#hero:after
+    content: ""
+    display: block
+    position: relative
+    margin: 0 auto -60px auto
+    $dim: 110px
+    height: $dim
+    width: $dim
+    border-radius: 50%
+    background: url('../../img/bread.png')no-repeat center
     
