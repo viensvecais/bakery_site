@@ -1,5 +1,131 @@
 #s2
-    background: url('../../img/bg3.png')
-    background-position: center center no-repeat
+    background: url('../../img/bg3.png') no-repeat
+    background-position: center center
     background-size: cover
+    font-family: Alegreya
     z-index: 3
+    #slider
+        position: relative
+        width: 965px
+        text-align: center
+        margin: 140px auto 110px 95px
+        display: flex
+        box-shadow: 0 25px 54px $shadow
+        border-bottom-left-radius: 100px
+        #ready
+            height: 200px
+            width: 200px
+            background: url('../../img/ready40.png')
+            position: absolute
+            right: 0
+            margin: -45px -105px auto auto
+            box-shadow: 0 25px 54px $shadow
+            overflow: hidden
+            z-index: 4
+            img
+                max-width: 100%
+            h5
+                font-size: 18px
+                font-weight: bold
+                color: $gold2
+                text-transform: uppercase
+                letter-spacing: 2px
+                margin: 32px auto -10px auto
+            h2
+                color: $gold3
+                font-size: 92px
+                font-weight: bold
+                letter-spacing: 11px
+                margin: 0 0 -3px 0
+            h6
+                font-size: 18px
+                font-weight: bold
+                letter-spacing: 2px
+        #food
+            width: 43.5vw
+            max-height: 511px
+            overflow: hidden
+            text-align: center
+            img
+                height: 100%
+                margin-left: -77.5%
+        #cap
+            background-color: white
+            width: 50vw
+            max-height: 511px
+            text-align: left
+            padding: 0 60px 0 62px
+            position: relative
+            box-shadow: 0 2px $shadow
+            background-image: url('../../img/windmill.png')
+            background-repeat: no-repeat
+            background-position: right bottom
+            h2
+                font-size: 48px
+                font-weight: bold
+                letter-spacing: 1px
+                margin: 70px 0 5px 0
+            h5
+                font-size: 14px
+                font-weight: bold
+                color: $gold2
+                text-transform: uppercase
+                letter-spacing: 1.2px
+                margin-bottom: 60px
+            p
+                font-family: Proxima Nova Rg
+                font-size: 14px
+                line-height: 24px
+                letter-spacing: 1.4px
+            #sliderNav
+                display: grid
+                grid-template-columns: 45px repeat(3, auto) 45px
+                margin: auto 0 40px 0
+                position: absolute
+                bottom: 0
+                width: calc(100% - 122px)
+                .arrow
+                    $arrow: 33px
+                    height: $arrow
+                    width: $arrow
+                    background-position: center center
+                    background-size: cover
+                    margin-top: auto
+                    margin-bottom: auto
+                    cursor: pointer
+                #left
+                    background-image: url('../../img/left.png')
+                    &:hover
+                        background-image: url('../../img/left-active.png')
+                #right
+                    background-image: url('../../img/right.png')
+                    margin-left: auto
+                    &:hover
+                        background-image: url('../../img/right-active.png')
+                .preview
+                    text-align: center
+                #first
+                    margin-right: auto
+                #third
+                    margin-left: auto
+        #cap:before
+            content: ""
+            position: absolute
+            display: block
+            height: 50px
+            width: 50px
+            border-radius: 50%
+            background: url('../../img/menu.png') center center no-repeat
+            background-color: white
+            margin: auto auto auto -25px
+            left: 0
+            top: calc(50% - 25px)
+    // #slider:after (Folded corner)
+    //     content: ""
+    //     border-width: 25px
+    //     border-color: white white transparent transparent
+    //     border-style: solid
+    //     position: absolute
+    //     bottom: 0
+    //     left: 0
+    //     overflow: hidden
