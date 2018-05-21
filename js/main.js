@@ -12,8 +12,7 @@ import '../assets/sass/main.sass';
 
   //Menu slider
 $(function(){
-  function SliderItem(name, image, preview1, preview2, preview3, header1, header2, caption, time){
-    this.name = name
+  function SliderItem(image, preview1, preview2, preview3, header1, header2, caption, time, style){
     this.image = image;
     this.preview1 = preview1;
     this.preview2 = preview2;
@@ -22,20 +21,129 @@ $(function(){
     this.header2 = header2;
     this.caption = caption;
     this.time = time;
+    this.style = style;
   }
-  var imgNames = ['food0', 'food1', 'food2', 'food3'];
-  $.each(imgNames, function(index,value) {
-    var objects = [];
-    objects[index] = new SliderItem(value, '<img src="img/slider-item/food'+index+'.png" alt="">', '<img src="img/slider-item/food'+index+1+'.png" alt="">', '<img src="img/slider-item/food'+index+2+'.png" alt="">' );
+  var food0 = new SliderItem(
+    "img/slider-item/food0.png",
+    "img/slider-item/food11.png",
+    "img/slider-item/food22.png",
+    "img/slider-item/food33.png",
+    'Tasty pancakes',
+    'season favourite',
+    'Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus.',
+    40,
+    "'margin-left', '-77.5%'"
+  );
+
+  var food1 = new SliderItem(
+    "img/slider-item/food1.png",
+    "img/slider-item/food22.png",
+    "img/slider-item/food33.png",
+    "img/slider-item/food00.png",
+    'Tasty food 1',
+    'winter favourite',
+    'Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.',
+    30,
+    "'margin-left', '-80%'"
+  );
+
+  var food2 = new SliderItem(
+    "img/slider-item/food2.png",
+    "img/slider-item/food33.png",
+    "img/slider-item/food00.png",
+    "img/slider-item/food11.png",
+    'Tasty food 2',
+    'spring favourite',
+    'Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus.',
+    45,
+    '"margin-left", "-5%"'
+    );
+
+  var food3 = new SliderItem(
+    "img/slider-item/food3.png",
+    "img/slider-item/food00.png",
+    "img/slider-item/food11.png",
+    "img/slider-item/food22.png",
+    'Tasty food 3',
+    'summer favourite',
+    'Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus.',
+    15,
+    "'margin-left', '-5%'"
+  );
     
-    console.log(objects);
-    
+
+  var i=0;
+  var timer;
+  var sliderInt = 8000;
+  timer = setInterval(function(){
+    // sliderLoop();
+  }, sliderInt);
+
+  $("a#left").click(function(){
+    clearInterval(timer);
+    if(i<3){
+      i++;
+    }else{
+      i=0;
+    }
+    slider();
+    timer = setInterval(function(){
+      sliderLoop();
+    }, sliderInt);
+    console.log(i);
   });
-    // var food0 = new SliderItem(
-    //   '<img src="img/slider-item/food0.png" alt="">',
-    //   '<img src="img/slider-item/food00.png" alt="">',
-    //   'Tasty pancakes',
-    //   'season favourite',
-    //   'Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus.',
-    //   40);
+  $("a#right").click(function(){
+    sliderLoop();
+    console.log(i);
+  });
+  
+  //Star ratings
+var j = 1;
+var rating = [];
+var starType = "star"
+  starGen();
+  $("#rating img").click(function(){
+    $(this).attr('src', 'img/star-active.png')
+    $(this).prevAll().attr('src', 'img/star-active.png')
+  })
+  $("#rating img").mouseenter(function(){
+    $(this).attr('src', 'img/star-active.png')
+    $(this).prevAll().attr('src', 'img/star-active.png')
+    $(this).nextAll().attr('src', 'img/star.png')
+  })
+
+
+
+
+function slider(){
+  var foodNum = "food" + i
+  $("#food img").attr("src",eval(foodNum).image);
+  // $("#food img").css(eval(foodNum).style);
+  $("#first img").attr("src",eval(foodNum).preview1);
+  $("#second img").attr("src",eval(foodNum).preview2);
+  $("#third img").attr("src",eval(foodNum).preview3);
+  $("#ready h2").text(eval(foodNum).time);
+  $("#cap h2").text(eval(foodNum).header1);
+  $("#cap h5").text(eval(foodNum).header2);
+  $("#cap p").text(eval(foodNum).caption);
+}
+function sliderLoop(){
+  if(i<3){
+    i++;
+  }else{
+    i=0;
+  }
+  slider();
+}
+
+function starGen(){
+  for(j; j<6; j++){
+    var img = '<img id="'+j+'" src="img/'+starType+'.png" alt="">'
+    rating.push(img);
+  }
+  $.each(rating, function(index, value){
+    $("#rating").append(value);
+  })
+}
+
 });
