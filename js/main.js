@@ -76,7 +76,7 @@ $(function(){
   var timer;
   var sliderInt = 8000;
   timer = setInterval(function(){
-    // sliderLoop();
+    sliderLoop();
   }, sliderInt);
 
   $("a#left").click(function(){
