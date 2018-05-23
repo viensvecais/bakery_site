@@ -175,23 +175,28 @@
                 margin: 140px auto 110px auto
                 width: 60vw
                 height: 100%
+                #rating
+                    top: calc(25% - 74px)
+                    height: 148px
                 #food
                     min-width: 100%
                     img
                         width: 100%
+                        margin: 0
                 #cap
                     min-height: 26.6vw
                     width: 100%
-                    padding: 0 3.75vw 0 3.875vw
+                    padding: 30px 3.75vw 0 3.875vw
                     position: relative
-                    padding: 30px 150px 0 150px
+                    padding: 
                     text-align: center
+                    background-size: 50%
                     h2
                         margin-top: 0
                     #sliderNav
                         position: relative
                         margin: 0 auto 2.1vw auto
-                        width: 90%
+                        width: 60%
                         grid-template-columns: repeat(5, auto)
                         .preview img
                             height: 6.5vw
@@ -212,7 +217,15 @@
                     top: 0
                     left: calc(50% - 25px)
 @media (max-width: 991px)
-    #s2 #slider
+    #s2 .container #slider
+        width: 80vw
+        #rating
+            align-items: center
+            grid-template-columns: repeat(5, 1fr)
+            left: 30px
+            top: 30px
+            width: 148px
+            height: auto
         #ready
             height: 150px
             width: 150px
@@ -227,17 +240,40 @@
                 font-size: 60px
             h6
                 font-size: 15px
+        #food
+            max-height: 100%
+            height: auto
         #cap
+            padding: 30px 50px 10px 50px
             h2
                 font-size: 3vw
             h5
                 font-size: 1.5vw
             p
                 font-style: 12px
-@media (max-width: 400px)
-    #s2 #slider
-        width: 80vw
+            #sliderNav
+                width: 80%
+                .preview img
+                    height: 10vw
+@media (max-width: 600px)
+    #s2 .container #slider
+        margin: 60px auto 60px auto
+        #ready
+            height: 100px
+            width: 100px
+            margin: -3.5vw -6.56vw auto auto
+            display: flex
+            flex-direction: column
+            align-content: stretch
+            h5
+                font-size: 10px
+                margin: 20px auto -10px auto
+            h2
+                font-size: 40px
+            h6
+                font-size: 10px
         #cap
+            padding: 30px 30px 10px 30px
             h2
                 font-size: 4vw
             h5
@@ -247,9 +283,17 @@
                 line-height: 12px
                 height: 12vw
                 overflow: auto
+@media (max-width: 400px)
+    #s2 .container #slider #cap
             #sliderNav
-                grid-template-columns: 2.81vw repeat(3, auto) 2.81vw
+                grid-template-columns: 4vw repeat(3, auto) 4vw
                 .arrow
                     $arrow: 15px
                     height: $arrow
                     width: $arrow
+    #s2 .container #slider #cap:before
+        height: 30px
+        width: 30px
+        margin: -15px auto auto auto
+        top: 0
+        left: calc(50% - 15px)
