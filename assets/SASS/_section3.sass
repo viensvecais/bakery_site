@@ -9,16 +9,59 @@
         display: grid
         grid-template-columns: repeat(2,1fr)
         padding: 89px 0 0 0
-        position: relative
+        font-family: 'Alegreya'
         #price
             text-align: center
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            margin: -11px 0 0 107px
+            #title
+                justify-self: flex-start
+                padding-bottom: 50px
+                h3
+                    font-size: 60px
+                    font-weight: bold
+                    letter-spacing: 3px
+                    margin: 0
+                h5
+                    text-transform: uppercase
+                    color: $gold4
+                    font-size: 18px
+                    letter-spacing: 0.8px
+                    font-weight: bold
+                    line-height: 17px
+            .title
+                font-size: 30px
+                font-weight: bold
+                letter-spacing: 1.5px
+            .caption
+                font-family: 'Proxima Nova Rg'
+                font-size: 16px
+                letter-spacing: 0.8px
+                color: $gray3
+            .pricetag
+                font-size: 36px
+                letter-spacing: 1.5px
+                color: $gold3
         #menu
             width: 441px
-            height: 605px
+            height: 602px
             background: url('../../img/menu-background.png')
-            background-position: center center
+            background-position: center left
             background-size: cover
             color: $gray2
             text-align: center
             justify-self: flex-end
             margin-right: 20px
+            padding: 10px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            #top
+                display: flex
+                justify-content: space-between
+                &:first-child
+                    justify-self: flex-start
+                &:last-child
+                    justify-self: flex-end
