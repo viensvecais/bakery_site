@@ -12,7 +12,6 @@
         $bottomdist: 70px
         padding: $topdist 0 $bottomdist 0
         font-family: 'Alegreya'
-        position: relative
         #price
             text-align: center
             display: flex
@@ -51,71 +50,157 @@
                 font-size: 36px
                 letter-spacing: 1.5px
                 color: $gold3
-        .menu
-            align-self: center
-            width: 441px
-            height: 600px
-            background: url('../../img/menu-background.png')
-            background-position: center left
-            background-size: cover
-            color: $gray2
-            text-align: center
-            justify-self: flex-end
-            margin-right: 20px
-            padding: 10px
+        #menus
             display: flex
-            flex-direction: column
-            justify-content: flex-end
-            align-content: center
-            position: absolute
-            .top
+            margin-right: 20px
+            position: relative
+            width: 100%
+            .menu
+                right: 20px
+                width: 441px
+                height: 600px
+                background: url('../../img/menu-background.png')
+                background-position: center left
+                background-size: cover
+                background-repeat: no-repeat
+                color: $gray2
+                text-align: center
+                padding: 10px
                 display: flex
-                justify-content: space-around
-                margin-top: 40px
-                margin-bottom: auto
-                padding: 0 10px
-                h5
+                flex-direction: column
+                justify-content: flex-end
+                align-content: center
+                position: absolute
+                .top
+                    display: flex
+                    justify-content: space-around
+                    margin-top: 40px
+                    margin-bottom: auto
+                    padding: 0 10px
+                    h5
+                        font-weight: bold
+                        font-size: 14px
+                h3
+                    font-size: 44px
                     font-weight: bold
+                    line-height: 60px
+                    letter-spacing: 1px
+                    padding-bottom: 22px
+                p
+                    font-family: 'Proxima Nova Rg'
                     font-size: 14px
+                    width: 330px
+                    margin: 0 auto
+                    letter-spacing: 0.7px
+                    line-height: 30px
+                    padding-bottom: 43px
+                .btn
+                    font-family: 'Alegreya'
+                    background-color: transparent
+                    border: 1px solid $gray4
+                    border-radius: 0
+                    width: 190px
+                    height: 50px
+                    margin: 0 auto 60px auto
+                    font-size: 18px
+                    font-weight: bold
+                    color: $gold2
+            #light
+                z-index: 5
+                // display: none
+                box-shadow: 0 18px 16px $shadow3
+            #mid
+                z-index: 4
+                background: url('../../img/menu-background-mid.png')
+                background-position: center center
+                background-size: cover
+                background-repeat: no-repeat
+                width: 402px
+                height: 546px
+                margin-right: 6px
+                // display: none
+                box-shadow: 0 18px 16px $shadow3
+            #dark
+                z-index: 3
+                background: url('../../img/menu-background-dark.png')
+                background-position: center center
+                background-size: cover
+                background-repeat: no-repeat
+                width: 367px
+                height: 500px
+                margin-right: -6px
+                box-shadow: 0 18px 16px $shadow3
+@media (max-width: 1400px)
+    #s3 .container
+        max-width: 90vw
+        margin-right: 20px
+        #price
+            margin-left: auto
+            margin-right: auto
+@media (max-width: 991px)
+    #s3 .container
+        #price
+            margin: -11px auto 6px auto
+            #title
+                padding-bottom: 24px
+                h3
+                    font-size: 40px
+                h5
+                    font-size: 12px
+                    line-height: 17px
+            .subtitle
+                font-size: 20px
+            .caption
+                font-size: 12px
+                letter-spacing: 0.5px
+            .pricetag
+                font-size: 24px
+        .menu
+            width: 44.5vw
+            height: 60.5vw
+            justify-content: space-between
+            .top
+                margin-top: 4vw
+                margin-bottom: 50px
+                h5
+                    font-size: 10px
             h3
-                font-size: 44px
-                font-weight: bold
-                line-height: 60px
-                letter-spacing: 1px
-                padding-bottom: 22px
+                font-size: 30px
+                line-height: 40px
+                padding-bottom: 15px
             p
-                font-family: 'Proxima Nova Rg'
+                overflow: auto
                 font-size: 14px
-                width: 330px
-                margin: 0 auto
-                letter-spacing: 0.7px
-                line-height: 30px
-                padding-bottom: 43px
+                width: 33.3vw
+                line-height: 20px
+                padding-bottom: 30px
             .btn
-                font-family: 'Alegreya'
-                background-color: transparent
-                border: 1px solid $gray4
-                border-radius: 0
-                width: 190px
-                height: 50px
-                margin: 0 auto 60px auto
-                font-size: 18px
-                font-weight: bold
-                color: $gold2
-        #light
-            z-index: 5
-            // display: none
+                width: 120px
+                height: 35px
+                margin: 20px auto 20px auto
+                font-size: 12px
         #mid
-            z-index: 4
-            background: url('../../img/menu-background-mid.png')
-            width: 402px
-            height: 546px
-            margin-right: 6px
-            // display: none
+            width: 40.6vw
+            height: 55.1vw
         #dark
-            z-index: 3
-            background: url('../../img/menu-background-dark.png')
-            width: 367px
-            height: 500px
-            margin-right: -6px
+            width: 37vw
+            height: 50.5vw
+@media (max-width: 600px)
+    #s3 .container
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 20px
+        overflow-y: scroll
+        max-width: 90vw
+        #price
+            grid-column-start: 1
+            grid-column-end: 4
+        .menu
+            position: relative
+        #light, #mid, #dark
+            width: 44.5vw
+            height: 60.5vw
+            margin: 0
+
+
+
                     
