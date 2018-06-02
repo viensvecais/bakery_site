@@ -1,3 +1,123 @@
 #s4
     background-color: #F3F1E9
     height: 1160px
+    .container
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-column-gap: 30px
+        font-family: 'Alegreya'
+        #heading
+            grid-column: 1/5
+            background: url('../../img/windmill-2.png')
+            background-repeat: no-repeat
+            background-position: center top
+            text-align: center
+            padding-top: 80px
+            margin-top: 10px
+            h3
+                font-size: 48px
+                margin-bottom: 3px
+                font-weight: bold
+                letter-spacing: 1.1px
+            h5
+                text-transform: uppercase
+                color: $gold2
+                font-size: 14px
+                letter-spacing: 1.4px
+                line-height: 5px
+                font-weight: bold
+                line-height: 17px
+                margin: 0
+        #ingredients
+            height: 740px
+            text-align: center
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            transform: translateY(-5px)
+            .ingerdient-item
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                img
+                    height: 100px
+                    width: 100px
+                    margin-left: auto
+                    margin-right: auto
+                h4
+                    font-size: 30px
+                    font-weight: bold
+                    color: $gold2
+                    letter-spacing: 1px
+                    margin-top: 15px
+                    margin-bottom: 18px
+                p
+                    font-family: 'Proxima Nova Rg'
+                    font-size: 14px
+                    margin-bottom: 0
+                    letter-spacing: 1.3px
+                    line-height: 20px
+        #recepie
+            grid-column: 2/5
+            position: relative
+            height: 555px
+            width: 840px
+            align-self: center
+            justify-self: flex-end
+            transform: translateY(-5px)
+            img
+                height: 100%
+            #timing
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                right: 10px
+                .sandwitch-time
+                    height: 200px
+                    width: 200px
+                    background: rgba(255, 255, 255, 0.8)
+                    text-align: center
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    margin-bottom: 0.5px
+                    h5
+                        font-size: 18px
+                        font-weight: bold
+                        color: $gold2
+                        text-transform: uppercase
+                        letter-spacing: 2px
+                        margin: 0
+                        transform: translateY(10px)
+                    h2
+                        font-weight: bold
+                        font-size: 60px
+                        letter-spacing: 11px
+                        padding-left: 10px
+                    h6
+                        font-size: 18px
+                        letter-spacing: 2px
+                        margin: 0
+                        transform: translateY(-5px)
+                .ready
+                    background: url('../../img/ready40.png')
+                    background-position: center
+                    background-size: cover
+                    h2
+                        color: $gold3
+                        font-size: 92px
+                        font-weight: bold
+
+            .btn
+                font-family: 'Alegreya'
+                position: absolute
+                height: 60px
+                width: 170px
+                border: 1px $gold5 dashed
+                background: white
+                border-radius: 0
+                transform: translate(-20px, calc(-50% - 10px))
+                color: $gold5
+                font-weight: bold
+                font-size: 18px
+                letter-spacing: 1px
