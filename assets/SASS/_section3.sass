@@ -52,25 +52,29 @@
                 color: $gold3
         #menus
             display: flex
-            margin-right: 20px
             position: relative
-            width: 100%
+            margin-left: auto
+            margin-right: 20px
             .menu
-                right: 20px
                 width: 441px
                 height: 600px
+                top: 0
+                bottom: 0
+                right: 0
+                left: 0
                 background: url('../../img/menu-background.png')
                 background-position: center left
                 background-size: cover
                 background-repeat: no-repeat
                 color: $gray2
                 text-align: center
+                margin-left: auto
                 padding: 10px
+                position: absolute
                 display: flex
                 flex-direction: column
-                justify-content: flex-end
-                align-content: center
-                position: absolute
+                top: 50%
+                transform: translateY(-50%)
                 .top
                     display: flex
                     justify-content: space-around
@@ -117,7 +121,9 @@
                 background-repeat: no-repeat
                 width: 402px
                 height: 546px
-                margin-right: 6px
+                margin-right: -14px
+                top: 50%
+                transform: translateY(-50%)
                 // display: none
                 box-shadow: 0 18px 16px $shadow3
             #dark
@@ -128,7 +134,7 @@
                 background-repeat: no-repeat
                 width: 367px
                 height: 500px
-                margin-right: -6px
+                margin-right: -24px
                 box-shadow: 0 18px 16px $shadow3
 @media (max-width: 1400px)
     #s3 .container
@@ -155,51 +161,69 @@
                 letter-spacing: 0.5px
             .pricetag
                 font-size: 24px
-        .menu
-            width: 44.5vw
-            height: 60.5vw
-            justify-content: space-between
-            .top
-                margin-top: 4vw
-                margin-bottom: 50px
-                h5
-                    font-size: 10px
-            h3
-                font-size: 30px
-                line-height: 40px
-                padding-bottom: 15px
-            p
-                overflow: auto
-                font-size: 14px
-                width: 33.3vw
-                line-height: 20px
-                padding-bottom: 30px
-            .btn
-                width: 120px
-                height: 35px
-                margin: 20px auto 20px auto
-                font-size: 12px
-        #mid
-            width: 40.6vw
-            height: 55.1vw
-        #dark
-            width: 37vw
-            height: 50.5vw
+        #menus
+            .menu
+                width: 44.5vw
+                height: 60.5vw
+                justify-content: space-between
+                .top
+                    margin-top: 4vw
+                    margin-bottom: 50px
+                    h5
+                        font-size: 10px
+                h3
+                    font-size: 30px
+                    line-height: 40px
+                    padding-bottom: 15px
+                p
+                    overflow: auto
+                    font-size: 14px
+                    width: 33.3vw
+                    line-height: 20px
+                    padding-bottom: 30px
+                .btn
+                    width: 120px
+                    height: 35px
+                    margin: 20px auto 20px auto
+                    font-size: 12px
+            #mid
+                width: 40.6vw
+                height: 55.1vw
+            #dark
+                width: 37vw
+                height: 50.5vw
 @media (max-width: 600px)
     #s3 .container
-        grid-template-columns: repeat(3, 1fr)
-        grid-gap: 20px
-        overflow-y: scroll
-        max-width: 90vw
-        #price
-            grid-column-start: 1
-            grid-column-end: 4
-        .menu
-            position: relative
-        #light, #mid, #dark
-            width: 44.5vw
-            height: 60.5vw
-            margin: 0
+        grid-template-columns: 1fr
+        #menus
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            overflow-x: scroll
+            max-width: 100vw
+            height: 100%
+            grid-gap: 15px
+            align-self: center
+            margin: 30px
+            .menu
+                position: relative
+                p
+                    width: 45vw
+                .btn
+                    width: 50px
+                    margin: 5px auto
+                    padding: 0
+            #light, #mid, #dark
+                width: 266px
+                height: 362px
+                margin: 0
+@media (max-width: 400px)
+    #s3 .container
+        grid-template-columns: 1fr
+        #menus
+            margin: 10px 0
+            .menu
+                p
+                    width: 65vw
 
 
 
