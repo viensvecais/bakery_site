@@ -13,7 +13,7 @@ module.exports = {
     // path: path.resolve(__dirname, process.env.NODE_ENV === 'production' ? '/' : 'dist/'),
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: process.env.NODE_ENV === 'production' ? './' : ''
   },
   module:{
     rules:[
