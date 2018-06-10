@@ -24,10 +24,10 @@ $(function(){
     this.style = style;
   }
   var food0 = new SliderItem(
-    "img/slider-item/food0.png",
-    "img/slider-item/food11.png",
-    "img/slider-item/food22.png",
-    "img/slider-item/food33.png",
+    "img/food0.png",
+    "img/food11.png",
+    "img/food22.png",
+    "img/food33.png",
     'Tasty pancakes',
     'season favourite',
     'Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus.',
@@ -36,10 +36,10 @@ $(function(){
   );
 
   var food1 = new SliderItem(
-    "img/slider-item/food1.png",
-    "img/slider-item/food22.png",
-    "img/slider-item/food33.png",
-    "img/slider-item/food00.png",
+    "img/food1.png",
+    "img/food22.png",
+    "img/food33.png",
+    "img/food00.png",
     'Tasty food 1',
     'winter favourite',
     'Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante.',
@@ -48,10 +48,10 @@ $(function(){
   );
 
   var food2 = new SliderItem(
-    "img/slider-item/food2.png",
-    "img/slider-item/food33.png",
-    "img/slider-item/food00.png",
-    "img/slider-item/food11.png",
+    "img/food2.png",
+    "img/food33.png",
+    "img/food00.png",
+    "img/food11.png",
     'Tasty food 2',
     'spring favourite',
     'Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus.',
@@ -60,10 +60,10 @@ $(function(){
     );
 
   var food3 = new SliderItem(
-    "img/slider-item/food3.png",
-    "img/slider-item/food00.png",
-    "img/slider-item/food11.png",
-    "img/slider-item/food22.png",
+    "img/food3.png",
+    "img/food00.png",
+    "img/food11.png",
+    "img/food22.png",
     'Tasty food 3',
     'summer favourite',
     'Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus.',
@@ -90,11 +90,9 @@ $(function(){
     timer = setInterval(function(){
       sliderLoop();
     }, sliderInt);
-    console.log(i);
   });
   $("a#right").click(function(){
     sliderLoop();
-    console.log(i);
   });
   
   //Star ratings

@@ -95,24 +95,29 @@
                 bottom: 0
                 width: calc(100% - 122px)
                 max-width: 100%
-                .arrow
-                    $arrow: 33px
-                    height: $arrow
-                    width: $arrow
-                    background-position: center center
-                    background-size: cover
-                    margin-top: auto
-                    margin-bottom: auto
-                    cursor: pointer
-                #left
-                    background-image: url('../../img/left.png')
-                    &:hover
-                        background-image: url('../../img/left-active.png')
-                #right
-                    background-image: url('../../img/right.png')
-                    margin-left: auto
-                    &:hover
-                        background-image: url('../../img/right-active.png')
+                .arrows
+                    position: relative
+                    .arrow
+                        position: absolute
+                        left: 0
+                        right: 0
+                        top: 50%
+                        transform: translateY(-50%)
+                        $arrow: 33px
+                        height: $arrow
+                        width: $arrow
+                        background-position: center center
+                        background-size: cover
+                        cursor: pointer
+                    #left
+                        background-image: url('../../img/left.png')
+                        &:hover
+                            background-image: url('../../img/left-active.png')
+                    #right
+                        background-image: url('../../img/right.png')
+                        margin-left: auto
+                        &:hover
+                            background-image: url('../../img/right-active.png')
                 .preview
                     text-align: center
                 #first
